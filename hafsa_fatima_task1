@@ -41,32 +41,31 @@
 
 # Your code here
 
-print(7/2) # output -> 3.5, divides 7 by 2
+print(7/2) # output --> 3.5, divides 7 by 2
 
-print(7//2) #output --> 3 becz it prints the value before the decimal point
+print(7//2) #output --> 3 ,  the // operator removes the fractional part and gives the floor value.
 
-print("7" + "2") # output -> 72, concatenates them both because both of them are between "" (strings) 
+print("7" + "2") # output --> 72, concatenates them both because both of them are between "" (strings) 
 
-print(type(7.0)) # output -> float, type() provides the type of the value
+print(type(7.0)) # output --> float, becz Python identifies 7.0 as a floating-point number because it contains a decimal point and
+ type() function provides the type of the value
 
-print(2 + 3 * 4 ** 2) # output -> 50, follows somethings similar to BDMAS
+print(2 + 3 * 4 ** 2) # output --> 50, exponentiation is performed first and then followed by  BDMAS rule
 
-print(bool("0")) # output -> true, we are type casting string -> boolean. The output is true because the string value was not empty
-
+print(bool("0")) # output --> true,  becz Python treats every non-empty string as True, even if it contains only a zero.
 # --------------------------------------------------------------
 # Exercise 2
 # --------------------------------------------------------------
 
 # Your code here
 
-# There was a "TypeError" in the code
+# There is a "case sensitive" name in the code
 Name = input("Name: ")
 print("Name: ", Name) 
 
 age = int(input("Age: ")) # the input needs to be converted to int for calculations
 print("Next Year: ", age + 1) 
-print("Done") # was missing a trailing quotation 
-
+print("Done") # it is correct
 
 # --------------------------------------------------------------
 # Exercise 3
@@ -74,15 +73,15 @@ print("Done") # was missing a trailing quotation
 
 # Your code here
 
-TotalBill = int(input("Input the total bill (in rupees): "))
-NoOfFriends = int(input("How many frinds are paying: "))
+TotalBill = int(input("Enter  total bill (in rupees): "))
+No_Of_Friends = int(input("How many frinds are paying: "))
 
 
 print("======Bill Distributor======")
 print("Total bill:", TotalBill)
-print("Numbers of friends:", NoOfFriends)
-print("Each pays:", TotalBill // NoOfFriends)
-print("Left over:", TotalBill % NoOfFriends)
+print("Numbers of friends:", No_Of_Friends)
+print("Each pays:", TotalBill // No_Of_Friends)
+print("Left over:", TotalBill % No_Of_Friends)
 
 # ==============================================================
 # PART B: TASKS
@@ -109,17 +108,17 @@ print("Left over:", TotalBill % NoOfFriends)
 
 # Your code here
 
-# stored all the values into variables of diff. data types; str, int, float, bool
-Name = "Adeel Hussain"
+# stored all the values into the variables of diff. data types; str, int, float, bool
+Name = "Hafsa Fatima"
 Age = 17
-height = 5.7
-isStudent = True
+height = 5.1
+is_Student = True
 
 # type() function explians the type of the value or what class they belongs to
 print(Name, type(Name))
 print(Age, type(Age))
 print(height, type(height))
-print(isStudent, type(isStudent))
+print(is_Student, type(is_Student))
 
 # --------------------------------------------------------------
 # Task 2: Temperature Converter (Input and Typecasting)
@@ -139,13 +138,13 @@ print(isStudent, type(isStudent))
 
 # Your code here
 
-tempCel = float(input("Enter temperature in celcius: "))
+Celcius = float(input("Enter temperature in celcius: "))
 
-tempFah = (tempCel * 9 / 5) + 32
-tempKel = tempCel + 273.15
+fahrenhit = (Celcius * 9 / 5) + 32
+kelvin = celcius + 273.15
 
-print("Fahrenheit: ", tempFah)
-print("kelvin: ", tempKel)
+print("Temperature in Fahrenheit : ", fahrenheit)
+print("Temperature in kelvin: ", kelvin)
 
 # --------------------------------------------------------------
 # Task 3: Simple Calculator (Arithmetic Operators)
