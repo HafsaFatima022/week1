@@ -39,27 +39,33 @@
 # 1)  nums = [3, 1, 2]
 #     nums.append(5)
 #     print(nums)
-#     My prediction: [3, 1, 2, 5]
+#     My prediction: 
+         [3, 1, 2, 5]
 #
 # 2)  print([10, 20, 30, 40][1:3])
-#     My prediction: [20, 30]
+#     My prediction: 
+          [20, 30]
 #
 # 3)  a = [1, 2]
 #     b = a
 #     b.append(3)
 #     print(a)
-#     My prediction: [1, 2, 3]  (b and a are points to same memory address)
+#     My prediction: 
+         [1, 2, 3]  # b and a are points to same memory address
 #
 # 4)  x = [5, 2, 8]
 #     print(x.sort())
-#     My prediction: None  (sort() changes the list but returns None)
+#     My prediction:
+            None  # sort() changes the list but returns None
 #
 # 5)  t = (5,)
 #     print(type(t))
-#     My prediction: <class 'tuple'>
+#     My prediction: 
+          <class 'tuple'>
 #
 # 6)  print(len([[1, 2], [3, 4]]))
-#     My prediction: 2
+#     My prediction:
+                 2
 #===========================================================
 # Your code goes here:
 #===========================================================
@@ -141,30 +147,37 @@ print("Point:", point)
 tasks = []
 
 while True:
-    print("1) Add  2) Remove  3) Show  4) Quit")
+    print("\n1) Add  2) Remove  3) Show  4) Quit")
+
     choice = input("Choose: ")
 
     if choice == "1":
         task = input("Task: ")
         tasks.append(task)
+        print("Task added ")
+
     elif choice == "2":
-        task = input("Task to remove: ")
+        task = input("Enter task to remove: ")
+
         if task in tasks:
             tasks.remove(task)
-            print("Removed:", task)
+            print("Task removed")
         else:
-            print("That task isn't in the list.")
+            print("Task not found!")
+
     elif choice == "3":
         if len(tasks) == 0:
-            print("No tasks yet.")
+            print("No tasks available.")
         else:
             for i in range(len(tasks)):
-                print(str(i + 1) + ". " + tasks[i])
+                print(i + 1, ".", tasks[i])
+
     elif choice == "4":
         print("Goodbye!")
         break
+
     else:
-        print("Invalid choice. Please enter 1, 2, 3 or 4.")
+        print("Invalid choice! Please try again.")
 #===========================================================
 #===========================================================
 # ############################################################
@@ -193,15 +206,15 @@ while True:
 #===========================================================
 # Your code goes here:
 #===========================================================
-text = input("Enter 5 numbers: ")
-parts = text.split()
+values = input("Enter 5 numbers: ")
+parts = values.split()
 
 numbers = []
 for p in parts:
     numbers.append(int(p))
 
 print("Sorted :", sorted(numbers))
-print("Sum    :", sum(numbers))
+print("Sum :", sum(numbers))
 print("Average:", sum(numbers) / len(numbers))
 print("Largest:", max(numbers))
 print("Smallest:", min(numbers))
